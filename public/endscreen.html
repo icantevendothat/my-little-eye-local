@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script> 
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <section class = "container">
+        <img id="submittedImg" src=""/>
+        <h1>X is the winner</h1> <!--append on js -->
+        <p>Score: </p> <!--append on js -->
+    </section>
+    <section class = "container">
+        <h1>Feed</h1>
+        <section class="submissions">
+            <img src="assets/cat.png" class="submitImg"/>
+            <section class="submitText">
+                <p>Name: </p>
+                <p>confidence: </p>
+            </section>   
+        </section>
+    </section>
+    <script src="/socket.io/socket.io.js"></script>   
+    <script src="end-sketch.js"></script>
+</body>
+</html>

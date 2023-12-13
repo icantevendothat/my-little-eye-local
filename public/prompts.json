@@ -1,0 +1,26 @@
+{
+    "prompts": [
+        {
+            "term": "phone",
+            "accepted": [
+                "cellular telephone",
+                "cellular phone",
+                "cellphone",
+                "cell",
+                "mobile phone",
+                "dial telephone",
+                "dial phone",
+                "pay-phone"
+            ]
+        },
+        {
+            "term": "pen",
+            "accepted": [
+                "ballpoint",
+                "ballpoint pen",
+                "ballpen",
+                "Biro"
+            ]
+        }
+    ]
+}

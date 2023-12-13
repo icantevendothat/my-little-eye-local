@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image classification using MobileNet and p5.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script> 
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+</head>
+<body>
+ <script src="/socket.io/socket.io.js"></script>    
+ <div id="countdown"></div>
+ <!-- <form id="usernameForm"> -->
+    <label for="username">Enter your username: </label>
+    <input type="text" id="username" name="username" required>
+    <input type="button" value="submit" onclick="submitUsername(document.getElementById('username').value)"/>
+    <!-- <button type="button" onclick="submitUsername()">Submit</button> -->
+ <!-- </form> -->
+ <!-- <script>
+  function testJS() {
+      username = document.getElementById('username').value,
+          src = '/sketch.js' + encodeURIComponent(b);
+  
+      document.location.href = url;
+  }
+  </script> -->
+ <!-- <script src="/socket.io/socket.io.js"></script>     -->
+ <script>
+  const socket = io();
+
+  socket.on('countdown', (countdown) => {
+    document.getElementById('countdown').innerText = countdown;
+  });
+
+  // Redirect after countdown
+  socket.on('redirect', (url) => {
+      window.location.href = url;
+  });
+
+  
+  function submitUsername() {
+      const usernameInput = document.getElementById('username');
+      const username = usernameInput.value;
+      socket.emit('username', username);
+      console.log (username);
+
+
+      // usernameInput.value = "";
+  }
+</script>
+<script src="sketch.js"></script>
+</body>
+</html>

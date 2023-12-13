@@ -1,0 +1,29 @@
+body {
+    /* margin: 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.submissions {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.submitImg {
+    height: 150px;
+    width: 150px;
+}
+
+.submitText {
+    width: 300px;
+}

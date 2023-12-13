@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image classification using MobileNet and p5.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script> 
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+</head>
+<body>
+    <script>
+        // Function to submit the screenshot and redirect to endscreen.html
+        function submitScreenshot() {
+            const username = 'username';
+            const data = { username: username, image: imageData };
+
+    
+            // Send both username and image data to the server
+            socket.emit('submitData', { username, dataUrl });
+    
+            // Redirect to endscreen.html
+            window.location.href = "endscreen.html?username=" + encodeURIComponent(username);
+        }
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="sketch.js"></script>
+</body>
+</html>
